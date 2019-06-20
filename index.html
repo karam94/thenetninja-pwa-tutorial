@@ -94,18 +94,19 @@
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
 
     <script>
-      var db = null;
-
-      // Your web app's Firebase configuration
-      var firebaseConfig = $.ajax({
-        type: "GET",
-        url: "firebase.json",
-        dataType: "json",
-        success: function(data) {
-          firebase.initializeApp(data);
-          db = firebase.firestore();
-        }
-      });
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDZDOpQ2i1j5jcxccT4C2qVfk4GUgc-2W0",
+        authDomain: "thenetninja-pwa-tutorial.firebaseapp.com",
+        databaseURL: "https://thenetninja-pwa-tutorial.firebaseio.com",
+        projectId: "thenetninja-pwa-tutorial",
+        storageBucket: "thenetninja-pwa-tutorial.appspot.com",
+        messagingSenderId: "36212510752",
+        appId: "1:36212510752:web:088403099d561b39"
+      };
+      
+      firebase.initializeApp(config);
+      const db = firebase.firestore();
     </script>
 
     <script src="/js/app.js"></script>
